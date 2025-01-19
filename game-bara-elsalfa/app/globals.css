@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Home.module.css */
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h1, h2 {
+  color: #333;
+}
