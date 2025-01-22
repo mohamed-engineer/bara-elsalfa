@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لعبة برا السالفة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>لعبة برا السالفة</h1>
+
+  <!-- الخطوة الأولى: اختيار الموضوع -->
+  <div id="topicSelection">
+    <h2>اختار موضوع السالفه:</h2>
+    <select id="topic">
+      <option value="الطعام">الطعام</option>
+      <option value="الملابس">الملابس</option>
+      <option value="الحيوانات">الحيوانات</option>
+      <option value="كرة القدم">كرة القدم</option>
+      <option value="لغات برمجة">لغات برمجة</option>
+    </select>
+    <button onclick="goToPlayerCount()">التالي</button>
+  </div>
+
+  <!-- الخطوة الثانية: اختيار عدد اللاعبين -->
+  <div id="step1" class="hidden">
+    <h2>كم عدد اللاعبين؟</h2>
+    <input type="number" id="playerCount" min="2" placeholder="أدخل العدد هنا">
+    <button onclick="generateNameInputs()">التالي</button>
+  </div>
+
+  <!-- الخطوة الثالثة: إدخال أسماء اللاعبين -->
+  <div id="step2" class="hidden">
+    <h2>أدخل أسماء اللاعبين:</h2>
+    <div id="nameInputs"></div>
+    <button onclick="startGame()">ابدأ اللعبة</button>
+  </div>
+
+  <!-- الخطوة الرابعة: تشغيل اللعبة -->
+  <div id="game" class="hidden">
+    <div id="result"></div>
+    <button onclick="nextStep()">التالي</button>
+  </div>
+
+  <!-- فقرة جديدة: فقرة الأسئلة -->
+  <div id="questions" class="hidden">
+    <h2>فقرة الأسئلة</h2>
+    <p id="questionPrompt"></p>
+    <button onclick="askQuestion()">التالي</button>
+  </div>
+  
+
+  <div id="voting" class="hidden">
+    <div id="votingPrompt"></div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
